@@ -20,6 +20,12 @@ export class ApiService {
         })
     }
 
+    putQuestion(question) {
+        this.http.put(`https://localhost:5001/questions/${question.id}`, question).subscribe(res => {
+            console.log(res)
+        })
+    }
+
     selectQuestion(question) {
         
         // selectedQuestion is a stream

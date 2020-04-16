@@ -9,7 +9,7 @@ export class QuestionComponent {
 
     question : any = {}
 
-    constructor(private api: ApiService){}
+    constructor(public api: ApiService){}
 
     ngOnInit(){
         this.api.questionSelected.subscribe(q => this.question = q)
