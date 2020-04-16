@@ -5,6 +5,8 @@ import { Component } from '@angular/core'
     selector: 'question',
     templateUrl: './question.component.html'
 })
-export class QuestionComponent{
-
+export class QuestionComponent {
+    post() {
+        console.log("test")
+    }
 }
