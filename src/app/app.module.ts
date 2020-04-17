@@ -8,7 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { RouterModule } from '@angular/router'
 import { AppComponent } from './app.component'
 import { QuestionComponent } from './question.component'
@@ -44,6 +44,7 @@ const routes = [
     HttpClientModule,
     RouterModule.forRoot(routes),
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
