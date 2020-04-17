@@ -12,7 +12,7 @@ export class QuizComponent {
     constructor(public api: ApiService){}
 
     ngOnInit(){
-        
+        this.api.quizSelected.subscribe(q => this.quiz = q)
     }
 
     post(quiz) {

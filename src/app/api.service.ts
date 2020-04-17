@@ -8,10 +8,17 @@ export class ApiService {
     private selectedQuestion = new Subject<any>();
     questionSelected = this.selectedQuestion.asObservable();
 
+    private selectedQuiz = new Subject<any>();
+    quizSelected = this.selectedQuiz.asObservable();
+
     constructor(private http: HttpClient) { }
 
     getQuestions() {
         return this.http.get('https://localhost:5001/api/questions')
+    }
+
+    getQuizzes(){
+        return this.http.get('https://localhost:5001/api/quizzes')
     }
 
     postQuestion(question) {
@@ -39,5 +46,9 @@ export class ApiService {
         // so that all subscriber will be notified
 
         this.selectedQuestion.next(question)
+    }
+
+    selectQuiz(quiz){
+        this.selectedQuiz.next(quiz)
     }
 }
