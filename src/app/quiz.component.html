@@ -11,7 +11,7 @@
         </form>
     </mat-card-content>
     <mat-card-actions>
-        <button  *ngIf="!quiz.id" (click)="null" mat-button>POST</button>
+        <button  *ngIf="!quiz.id" (click)="post(quiz)" mat-button>POST</button>
         <button  *ngIf="quiz.id" (click)="null" mat-button>EDIT</button>
         <button  *ngIf="quiz.id" (click)="null" mat-button>NEW</button>
     </mat-card-actions>

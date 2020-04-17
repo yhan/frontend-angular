@@ -11,17 +11,23 @@ export class ApiService {
     constructor(private http: HttpClient) { }
 
     getQuestions() {
-        return this.http.get('https://localhost:5001/questions')
+        return this.http.get('https://localhost:5001/api/questions')
     }
 
     postQuestion(question) {
-        this.http.post('https://localhost:5001/questions', question).subscribe(res => {
+        this.http.post('https://localhost:5001/api/questions', question).subscribe(res => {
             console.log(res)
         })
     }
 
     putQuestion(question) {
-        this.http.put(`https://localhost:5001/questions/${question.id}`, question).subscribe(res => {
+        this.http.put(`https://localhost:5001/api/questions/${question.id}`, question).subscribe(res => {
+            console.log(res)
+        })
+    }
+
+    postQuiz(quiz) {
+        this.http.post('https://localhost:5001/api/quizzes', quiz).subscribe(res => {
             console.log(res)
         })
     }

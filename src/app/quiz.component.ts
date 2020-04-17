@@ -14,4 +14,8 @@ export class QuizComponent {
     ngOnInit(){
         
     }
+
+    post(quiz) {
+        this.api.postQuiz(quiz)
+    }
 }
