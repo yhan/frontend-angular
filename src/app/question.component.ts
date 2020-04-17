@@ -15,7 +15,11 @@ export class QuestionComponent {
         this.api.questionSelected.subscribe(q => this.question = q)
     }
 
-    post(question) {
-        this.api.postQuestion(question)
+    create(question) {
+        this.api.createQuestion(question)
+    }
+
+    modify(question){
+        this.api.modifyQuestion(question)
     }
 }

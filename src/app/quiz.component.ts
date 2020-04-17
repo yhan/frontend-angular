@@ -15,7 +15,11 @@ export class QuizComponent {
         this.api.quizSelected.subscribe(q => this.quiz = q)
     }
 
-    post(quiz) {
-        this.api.postQuiz(quiz)
+    create(quiz) {
+        this.api.createQuiz(quiz)
+    }
+
+    modify(quiz){
+        this.api.modifyQuiz(quiz)
     }
 }

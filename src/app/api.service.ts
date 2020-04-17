@@ -21,20 +21,26 @@ export class ApiService {
         return this.http.get('https://localhost:5001/api/quizzes')
     }
 
-    postQuestion(question) {
+    createQuestion(question) {
         this.http.post('https://localhost:5001/api/questions', question).subscribe(res => {
             console.log(res)
         })
     }
 
-    putQuestion(question) {
+    modifyQuestion(question) {
         this.http.put(`https://localhost:5001/api/questions/${question.id}`, question).subscribe(res => {
             console.log(res)
         })
     }
 
-    postQuiz(quiz) {
+    createQuiz(quiz) {
         this.http.post('https://localhost:5001/api/quizzes', quiz).subscribe(res => {
+            console.log(res)
+        })
+    }
+
+    modifyQuiz(quiz) {
+        this.http.put(`https://localhost:5001/api/quizzes/${quiz.id}`, quiz).subscribe(res => {
             console.log(res)
         })
     }
