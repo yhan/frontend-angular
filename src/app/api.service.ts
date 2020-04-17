@@ -13,8 +13,8 @@ export class ApiService {
 
     constructor(private http: HttpClient) { }
 
-    getQuestions() {
-        return this.http.get('https://localhost:5001/api/questions')
+    getQuestions(quizId : number) {
+        return this.http.get(`https://localhost:5001/api/questions/${quizId}`)
     }
 
     getQuizzes(){
