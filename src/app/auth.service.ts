@@ -21,6 +21,10 @@ export class AuthService {
         })
     }
 
+    logout(){
+        localStorage.removeItem('token')
+    }
+
     authenticate(res){
         localStorage.setItem('token', res.toString())
 
