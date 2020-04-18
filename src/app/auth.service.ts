@@ -31,4 +31,7 @@ export class AuthService {
         this.router.navigate(['/'])
     }
     
+    isAuthenticated() : boolean {
+        return !!localStorage.getItem('token')
+    }
 }
