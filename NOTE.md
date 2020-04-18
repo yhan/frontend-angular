@@ -10,6 +10,8 @@ ng new my-dream-app
 
 cd my-dream-app
 
+[ref](https://www.linkedin.com/learning/building-applications-with-angular-asp-dot-net-core-and-entity-framework-core)
+
 ## install package globally
 npm install -g flag
 
