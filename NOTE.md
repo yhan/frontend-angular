@@ -61,3 +61,22 @@ info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
       Request finished in 20.1683ms 401
 
 ```
+
+Visibility myth:  
+
+```ts
+import { Component } from '@angular/core'
+import  { AuthService} from './auth.service'
+
+@Component({
+  template:`
+        <button mat-button (click)="auth.logout()">Logout</button> 
+    ` // Property 'auth' is private and only accessible within class 'NavComponent'.
+})
+
+export class NavComponent {
+  constructor(public /* private  or nothing will cause (see above) **/auth: AuthService) { 
+  }
+}
+
+```
