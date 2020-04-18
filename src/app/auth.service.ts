@@ -7,9 +7,9 @@ export class AuthService {
     constructor(private http: HttpClient) { }
 
     register(credentials) {
-        this.http.post("https://localhost:5001/api/account", credentials, {responseType: 'text'}).subscribe(res => {
+        this.http.post("http://localhost:63101/api/account", credentials).subscribe(res => {
 
-            localStorage.setItem('token', res)
+            localStorage.setItem('token', res.toString())
         })
     }
 }
